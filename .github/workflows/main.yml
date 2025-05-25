@@ -7,5 +7,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
-        run: echo "Hello from manually triggered workflow!"
+      - name: Read org secret
+        run: echo "Secret is ${{ secrets.MY_SECRET }}"
+      - name: Read org variable
+        run: echo "Org variable is ${{ vars.EXAMPLE }}"
